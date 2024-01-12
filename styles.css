@@ -1,1 +1,11 @@
+.container {
+    
+    border: solid black 1px;
+}
 
+.mainbod {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
