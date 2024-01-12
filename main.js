@@ -61,8 +61,15 @@ function bindPainting() {
 
 // Prompt the user for the grid size
 function playerPrompt() {
-    let answer = prompt("What size grid would you like?");
-    return parseInt(answer); // Convert answer to integer
+    let answer = parseInt(prompt("What size grid would you like?"));
+    if (answer > 100) {
+        return alert("Cannot be more then 100")
+    } else if (isNaN(answer)) {
+        return alert("Please enter a number")
+    } else if (answer <= 0) {
+            alert("The number must be positive.");
+    }
+    return answer; // Convert answer to integer
 }
 
 // Set up the initial grid
